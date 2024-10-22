@@ -69,7 +69,7 @@
         android:id="@+id/author_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="By Chloé Toledano and Simon Feger"
+        android:text="By Chloé Toledano"
         android:textSize="18sp"
         android:textColor="@color/emerald_green"
         app:layout_constraintBottom_toBottomOf="parent"
