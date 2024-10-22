@@ -17,23 +17,24 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        userNameInput = findViewById(R.id.userName);  // Reference to the EditText field
-        playButton = findViewById(R.id.play_button);
+        userNameInput = findViewById(R.id.userName);  // Assuming this is the ID of the EditText field for entering the user's name
+        playButton = findViewById(R.id.play_button);  // Play button ID
 
-        // Play button starts the quiz
+        // Set up the click listener for the Play button
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String userName = userNameInput.getText().toString();  // Capture the entered name
+                // Get the user name from the input field
+                String userName = userNameInput.getText().toString();
 
-                // Ensure userName is not empty
-                if (!userName.isEmpty()) {
-                    Intent intent = new Intent(MainActivity.this, QuizActivity.class);
-                    intent.putExtra("USER_NAME", userName);  // Pass the user name to QuizActivity
-                    startActivity(intent);
-                } else {
-                    userNameInput.setError("Please enter your name");
-                }
+                // Create an intent to navigate to LevelSelectionActivity
+                Intent intent = new Intent(MainActivity.this, LevelSelectionActivity.class);
+
+                // Pass the user's name to the next activity
+                intent.putExtra("USER_NAME", userName);
+
+                // Start the LevelSelectionActivity
+                startActivity(intent);
             }
         });
     }

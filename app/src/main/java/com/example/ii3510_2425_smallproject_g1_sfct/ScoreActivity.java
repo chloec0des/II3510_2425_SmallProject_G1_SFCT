@@ -55,5 +55,6 @@ public class ScoreActivity extends AppCompatActivity {
                 finish();  // Close the activity and exit the app
             }
         });
+
     }
 }

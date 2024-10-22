@@ -60,12 +60,13 @@ public class QuizActivity extends AppCompatActivity {
         quitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Navigate back to the level selection activity
-                Intent intent = new Intent(QuizActivity.this, LevelSelectionActivity.class);
+                // Navigate back to the homepage (MainActivity)
+                Intent intent = new Intent(QuizActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();  // Finish current activity so user cannot return to it
             }
         });
+
     }
 
     private List<QuizQuestion> generateQuestions(String level) {
