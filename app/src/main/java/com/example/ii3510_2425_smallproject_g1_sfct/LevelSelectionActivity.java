@@ -43,7 +43,10 @@ public class LevelSelectionActivity extends AppCompatActivity {
 
     private void startQuiz(String level) {
         Intent intent = new Intent(LevelSelectionActivity.this, QuizActivity.class);
-        intent.putExtra("LEVEL", level);  // Pass the level to the QuizActivity
+        intent.putExtra("LEVEL", level);  // Assuming you're passing the selected level
+        String userName = getIntent().getStringExtra("USER_NAME");
+        intent.putExtra("USER_NAME", userName);  // Pass the user name to QuizActivity
         startActivity(intent);
+
     }
 }

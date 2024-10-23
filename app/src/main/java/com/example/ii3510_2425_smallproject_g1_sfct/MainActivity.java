@@ -24,17 +24,11 @@ public class MainActivity extends AppCompatActivity {
         playButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Get the user name from the input field
-                String userName = userNameInput.getText().toString();
-
-                // Create an intent to navigate to LevelSelectionActivity
                 Intent intent = new Intent(MainActivity.this, LevelSelectionActivity.class);
-
-                // Pass the user's name to the next activity
+                String userName = userNameInput.getText().toString();
                 intent.putExtra("USER_NAME", userName);
-
-                // Start the LevelSelectionActivity
                 startActivity(intent);
+
             }
         });
     }
